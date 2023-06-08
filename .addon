@@ -1,0 +1,29 @@
+{
+  "Title": "EyeBox",
+  "Type": "addon",
+  "Org": "markiz",
+  "Ident": "eyebox",
+  "Tags": "runtime entity",
+  "Schema": 1,
+  "HasAssets": true,
+  "AssetsPath": "",
+  "Resources": null,
+  "MenuResources": null,
+  "HasCode": true,
+  "CodePath": "/code/",
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "Metadata": {
+    "CsProjName": "",
+    "PrimaryAsset": "Sandbox.code.EyeBox",
+    "PhysicsMins": "-20,-20,-20",
+    "PhysicsMaxs": "-20,-20,-20",
+    "RenderMins": "-20,-20,-20",
+    "RenderMaxs": "-20,-20,-20",
+    "ParentPackage": "facepunch.sandbox",
+    "Summary": "",
+    "Description": "",
+    "Public": true,
+    "ReplaceTags": "runtime entity"
+  }
+}
