@@ -32,12 +32,10 @@ public partial class BoxScreen : Panel {
     private (Vector2 dir, float cos) GetEyeDir(Vector3 additionalOffset)
     {
         var offsetPos = parentWorldPanel.Transform.PointToWorld(offset + additionalOffset);
-
-        var cameraPos3d = parentWorldPanel.Transform.WithPosition(offsetPos).PointToLocal(Camera.Position);
-        var vec2 = new Vector2(cameraPos3d.y, -cameraPos3d.z);
+        var cameraLocalPos = parentWorldPanel.Transform.WithPosition(offsetPos).PointToLocal(Camera.Position).Normal;
         
-        var screenNormal = parentWorldPanel.Rotation.Forward;
-        var cos = 1 - screenNormal.Dot((Camera.Position - offsetPos).Normal);
+        var vec2 = new Vector2(cameraLocalPos.y, -cameraLocalPos.z);
+        var cos = vec2.Distance(Vector2.Zero);
 
         return (vec2.Normal, cos);
     }

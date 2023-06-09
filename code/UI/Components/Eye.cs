@@ -19,7 +19,7 @@ public class Eye : Panel
 
 	public void SetDir(Vector2 dir, float cos)
 	{
-		var mult = Math.Clamp(cos*60, -15, 15);
+		var mult = Math.Clamp(cos*17, -17, 17);
 		pupil.Style.Left = dir.x * mult;
 		pupil.Style.Top = dir.y * mult;
 	}
